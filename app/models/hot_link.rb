@@ -1,0 +1,2 @@
+class HotLink < ApplicationRecord
+end
