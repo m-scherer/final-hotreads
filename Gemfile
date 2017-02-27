@@ -19,6 +19,7 @@ gem 'better_errors', group: :development
 gem 'react-rails'
 gem 'sprockets-es6'
 gem 'active_model_serializers', '~> 0.10.0'
+gem 'rack-cors', :require => 'rack/cors'
 
 # gem 'unicorn'
 
