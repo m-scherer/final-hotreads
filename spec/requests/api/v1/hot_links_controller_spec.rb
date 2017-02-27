@@ -23,7 +23,7 @@ RSpec.describe 'HotLinksController' do
   context 'GET /api/v1/hot_links' do
     it "can get the top ten hot_links" do
 
-      10.times do |i|
+      11.times do |i|
         HotLink.create(url: "http://test#{i}.com")
       end
 

@@ -9,5 +9,4 @@ class ApplicationController < ActionController::Base
                   .limit(10)
   end
 
-
 end
