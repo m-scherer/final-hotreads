@@ -12,6 +12,10 @@ class Api::V1::HotLinksController < ApplicationController
     end
   end
 
+  def index
+    render json: hot_reads, status: 200
+  end
+
   private
 
   def hot_links_params

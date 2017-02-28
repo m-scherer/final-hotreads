@@ -20,4 +20,19 @@ RSpec.describe 'HotLinksController' do
       expect(HotLink.count).to eq(0)
     end
   end
+  context 'GET /api/v1/hot_links' do
+    it "can get the top ten hot_links" do
+
+      11.times do |i|
+        HotLink.create(url: "http://test#{i}.com")
+      end
+
+      get '/api/v1/hot_links'
+
+      parsed = JSON.parse(response.body)
+      expect(response.status).to eq(200)
+      expect(parsed).to be_instance_of(Array)
+      expect(parsed.count).to eq(10)
+    end
+  end
 end
